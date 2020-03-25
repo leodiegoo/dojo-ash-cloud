@@ -1,29 +1,32 @@
 {
+  "specialization": {},
 
-    
-
-    
-
-    
-
-    "specialization": {
+  "middleware": {
+    "static": {
+      "module": {
+        "arguments": ["path:./.build"]
+      }
     },
-
-    "middleware": {
-
-        
-
-        "static": {
-            "module": {
-                "arguments": [ "path:./.build" ]
-            }
-        },
-
-        "router": {
-            "module": {
-                "arguments": [{ "directory": "path:./controllers" }]
-            }
-        }
-
+    "csrf": {
+      "enabled": false,
+      "priority": 111,
+      "module": {
+        "name": "lusca",
+        "method": "csrf",
+        "arguments": [{ "csrf": false }]
+      }
+    },
+    "cors": {
+      "enabled": true,
+      "priority": 119,
+      "module": {
+        "name": "path:./middlewares/cors"
+      }
+    },
+    "router": {
+      "module": {
+        "arguments": [{ "directory": "path:./controllers" }]
+      }
     }
+  }
 }

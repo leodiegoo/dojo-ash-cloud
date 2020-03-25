@@ -1,0 +1,15 @@
+* {
+  outline: none;
+}
+
+input {
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 5px;
+}
+
+table td {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
